@@ -9,5 +9,5 @@
 #### 2. To run tests:
 - to run all the tests in the repo run test.sh file:<br/>
 `./test.sh`
-- to run only tests for a specific feature add a test mark to the run command, e.g.:<br/>
+- to run only tests for a specific feature add a test tag to the run command, e.g.:<br/>
 `./test.sh home_page`
