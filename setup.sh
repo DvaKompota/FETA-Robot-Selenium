@@ -4,3 +4,5 @@
 # Run the commands
 echo pip3 install -r requirements.txt;
 eval pip3 install -r requirements.txt;
+echo export PYTHONPATH=.;
+eval export PYTHONPATH=.;
