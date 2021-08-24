@@ -27,4 +27,3 @@ Text Box Page - Validate page elements
     When Open Page    Text Box Page
     Then Happy Elements Should Be Visible     Text Box Page
     And Page Heading Should Be Visible    Text Box Page
-
