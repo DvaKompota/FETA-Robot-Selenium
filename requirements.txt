@@ -1,5 +1,6 @@
 pytest>=6.2.4
 PyYAML>=5.4.1
+selenium>=3.1
 robotframework>=3.2.1
 robotframework-seleniumlibrary>=4.4.0
 robotframework-pageobjectlibrary>=1.0

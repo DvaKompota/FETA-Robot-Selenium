@@ -3,14 +3,12 @@ from robot.libraries.BuiltIn import BuiltIn
 import config
 
 
-feta = pages.BasePage().selib
-
-
 def robot_log(message):
     BuiltIn().log(message)
 
 
 def setup_browser():
+    feta = pages.BasePage().selib
     options = ''
     options += 'add_argument("--headless")' if config.headless else ''
     options += '; ' if options and config.maximized else ''
@@ -23,21 +21,24 @@ def setup_browser():
 
 def open_page(page_name):
     page = getattr(pages, page_name.replace(' ', ''))()
-    feta.go_to(page.PAGE_URL)
-    feta.wait_until_element_is_visible(page.header)
+    page.selib.go_to(page.PAGE_URL)
+    page.selib.wait_until_element_is_visible(page.header)
+    page.selib.wait_until_element_is_visible(page.ad_banner_close)
+    page.click(page.ad_banner_close)
+    page.selib.wait_until_element_is_not_visible(page.ad_banner)
 
 
 def happy_elements_should_be_visible(page_name):
     page = getattr(pages, page_name.replace(' ', ''))()
     for element in page.happy_elements:
-        feta.element_should_be_visible(element)
+        page.selib.element_should_be_visible(element)
 
 
-def page_heading_should_be_visible(page_name):
+def page_heading_should_be_correct(page_name):
     page = getattr(pages, page_name.replace(' ', ''))()
     heading = True if getattr(page, 'page_heading_text', '') else False
     subheading = True if getattr(page, 'page_subheading_text', '') else False
     if heading:
-        feta.element_text_should_be(page.page_heading, page.page_heading_text)
+        page.selib.element_text_should_be(page.page_heading, page.page_heading_text)
     if subheading:
-        feta.element_text_should_be(page.page_subheading, page.page_subheading_text)
+        page.selib.element_text_should_be(page.page_subheading, page.page_subheading_text)

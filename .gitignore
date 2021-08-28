@@ -7,3 +7,6 @@
 
 # Robot Framework report files
 reports
+
+# Developer's folder for local tools and utils
+/dev/

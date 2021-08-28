@@ -7,12 +7,12 @@ whitelisted_characters:
   blacklisted: '±£¥×÷§¨'
 
 test_customer:
-  first_name: John
-  last_name: Doe
+  first_name: Carl
+  last_name: Proctor
   email: email+{placeholder}@gmail.com
   password: Pass{placeholder}!@#
   address1: 621 Cowan Ave
   city: Los Angeles
-  state: California
+  state: CA
   zip_code: 90045
   phone: 555-555-5555
