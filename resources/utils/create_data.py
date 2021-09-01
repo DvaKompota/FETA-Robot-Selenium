@@ -119,7 +119,8 @@ def generate_customer():
             }
     """
     customer = feta_data['test_customer']
-    customer['email'] = generate_email()
+    customer['email'] = generate_email().replace("+", "")  # demoqa.com doesn't accept emails with "+" character
+    # customer['email'] = generate_email()  # uncomment if unique emails like 'email+1234567890@gmail.com' are needed
     customer['password'] = generate_password()
     customer['full_name'] = f'{customer["first_name"]} {customer["last_name"]}'
     customer['full_address'] = f'{customer["address1"]}, {customer["city"]}, {customer["state"]} {customer["zip_code"]}'
