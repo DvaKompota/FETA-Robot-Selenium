@@ -17,7 +17,7 @@ Test Teardown   Run Keyword If Test Failed  Capture Page Screenshot
 Register Page - Validate page elements
     [Tags]              book_store    register_page
     [Documentation]     Varifies that Register Page opens, has all the expected elements,
-    ...                 and heading and subheadings have the expected text
+    ...                 and heading and subheading have the expected text
 
     Given Open Page    Register Page
     Then Happy Elements Should Be Visible    Register Page
