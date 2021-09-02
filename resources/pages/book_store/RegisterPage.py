@@ -11,7 +11,10 @@ class RegisterPage(BasePage):
     last_name_field = '//input[@id="lastname"]'
     username_field = '//input[@id="userName"]'
     password_field = '//input[@id="password"]'
+    captcha_iframe = '//iframe[@title="reCAPTCHA"]'
     captcha = '//span[@id="recaptcha-anchor"]'
+    captcha_verification_output = '//*[@id="output"]//*[@id="name"]'
+    captcha_verification_text = 'Please verify reCaptcha to register!'
     register_button = '//button[@id="register"]'
     back_to_login_button = '//button[@id="gotologin"]'
 
