@@ -38,7 +38,13 @@ def page_heading_should_be_correct(page_name):
     page = getattr(pages, page_name.replace(' ', ''))()
     heading = True if getattr(page, 'page_heading_text', '') else False
     subheading = True if getattr(page, 'page_subheading_text', '') else False
+    subheading1 = True if getattr(page, 'page_subheading1_text', '') else False
+    subheading2 = True if getattr(page, 'page_subheading2_text', '') else False
     if heading:
         page.selib.element_text_should_be(page.page_heading, page.page_heading_text)
     if subheading:
         page.selib.element_text_should_be(page.page_subheading, page.page_subheading_text)
+    if subheading1:
+        page.selib.element_text_should_be(page.page_subheading1, page.page_subheading1_text)
+    if subheading2:
+        page.selib.element_text_should_be(page.page_subheading2, page.page_subheading2_text)
