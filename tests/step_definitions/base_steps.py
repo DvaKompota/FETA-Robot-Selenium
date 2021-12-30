@@ -1,3 +1,4 @@
+from chromedriver_binary import add_chromedriver_to_path
 from resources import pages
 from robot.libraries.BuiltIn import BuiltIn
 import config
@@ -8,6 +9,7 @@ def robot_log(message):
 
 
 def setup_browser():
+    add_chromedriver_to_path()
     feta = pages.BasePage().selib
     options = ''
     options += 'add_argument("--headless")' if config.headless else ''
