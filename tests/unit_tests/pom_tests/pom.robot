@@ -7,4 +7,6 @@ Library         pom_steps.py
 
 Inheritance TC
     [Tags]    unit_tests
+    [Documentation]     Varifies that Child Page object inherits Parent Page Object's attributes and methods,
+    ...                 while overriding those, that are redifined in Child Page object
     Given Validate Page Objects Inheritance
