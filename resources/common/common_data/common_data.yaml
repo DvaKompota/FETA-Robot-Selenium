@@ -1,0 +1,7 @@
+whitelisted_characters:
+  digits: '0123456789'
+  letters_basic: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  letters_extended: ''
+  symbols_basic: "' -.`~´"
+  symbols_extended: '!"#$%&()*+,/:;<=>?@[\]^_{|}'
+  blacklisted: '±£¥×÷§¨'
