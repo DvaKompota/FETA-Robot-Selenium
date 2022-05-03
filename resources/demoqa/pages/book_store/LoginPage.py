@@ -13,10 +13,10 @@ class LoginPage(BasePage):
     password_field = '//input[@id="password"]'
     login_button = '//button[@id="login"]'
     new_user_button = '//button[@id="newUser"]'
+    login_happy_elements = [page_subheading1, page_subheading2, username_field, password_field, login_button,
+                            new_user_button]
 
     def __init__(self):
         super().__init__()
         self.PAGE_URL = f'{super().PAGE_URL}{self.uri}'
-        self.happy_elements = super().happy_elements + [self.page_heading, self.page_subheading1, self.page_subheading2,
-                                                        self.username_field, self.password_field, self.login_button,
-                                                        self.new_user_button]
+        self.happy_elements = super().happy_elements + [self.page_heading] + self.login_happy_elements

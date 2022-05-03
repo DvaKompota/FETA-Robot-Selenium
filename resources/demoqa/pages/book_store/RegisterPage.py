@@ -17,10 +17,10 @@ class RegisterPage(BasePage):
     captcha_verification_text = 'Please verify reCaptcha to register!'
     register_button = '//button[@id="register"]'
     back_to_login_button = '//button[@id="gotologin"]'
+    register_happy_elements = [page_subheading, first_name_field, last_name_field, username_field, password_field,
+                               register_button, back_to_login_button]
 
     def __init__(self):
         super().__init__()
         self.PAGE_URL = f'{super().PAGE_URL}{self.uri}'
-        self.happy_elements = super().happy_elements + [self.page_heading, self.page_subheading, self.first_name_field,
-                                                        self.last_name_field, self.username_field, self.password_field,
-                                                        self.register_button, self.back_to_login_button]
+        self.happy_elements = super().happy_elements + [self.page_heading] + self.register_happy_elements
