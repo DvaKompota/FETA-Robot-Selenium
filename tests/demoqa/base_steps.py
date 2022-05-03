@@ -6,9 +6,6 @@ def open_page(page_name):
     page = getattr(pages, page_name.replace(' ', ''))()
     page.selib.go_to(page.PAGE_URL)
     page.selib.wait_until_element_is_visible(page.header)
-    page.selib.wait_until_element_is_visible(page.ad_banner_close)
-    page.click(page.ad_banner_close)
-    page.selib.wait_until_element_is_not_visible(page.ad_banner)
 
 
 def happy_elements_should_be_visible(page_name):
