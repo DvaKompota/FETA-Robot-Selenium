@@ -1,5 +1,5 @@
 from resources.demoqa import pages
-from tests.common.common_steps import robot_log, setup_browser
+from tests.common.common_steps import setup_browser, robot_log, log_info, log_debug, log_warning
 
 
 def open_page(page_name):

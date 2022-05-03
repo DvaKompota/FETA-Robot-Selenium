@@ -18,7 +18,7 @@ fi
 test_command="${test_command} -d `pwd`/reports"
 
 # Setup test path:
-test_command="${test_command} `pwd`/features/"
+test_command="${test_command} `pwd`/tests/demoqa/features/"
 
 # Run the commands
 echo $test_command;
