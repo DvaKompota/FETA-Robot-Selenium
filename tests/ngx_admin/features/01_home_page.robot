@@ -3,8 +3,8 @@ Documentation   Validates Elements Page functionality
 
 Library         SeleniumLibrary  run_on_failure=Nothing
 Library         PageObjectLibrary
-Library         ../../base_steps.py
-Library         ../../step_definitions/elements_steps.py
+Library         ../base_steps.py
+Library         ../step_definitions/home_page_steps.py
 
 Suite Setup     Setup Browser
 Suite Teardown  Close Browser
@@ -19,6 +19,5 @@ Home Page - Validate page elements load correctly in FullHD
     [Documentation]     Varifies that Home Page opens and has all the expected elements,
     ...                 and heading and subheading have the expected text
 
-    Given Open Page    Home Page
-    Then Happy Elements Should Be Visible    Elements Page
-    And Page Heading Should Be Correct    Elements Page
+    Given Open Page   Home Page
+    Then Validate Url    Home Page
